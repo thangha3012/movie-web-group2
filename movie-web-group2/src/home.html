@@ -1,11 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BetFilms</title>
+    <link rel="icon" type="image/x-icon" href="../img/logo1-removebg-preview.png" style="width: 20px; height: 20px;" />
+
+    <link rel="stylesheet" href="../asset/Bootstrap/css/bootstrap.min.css">
+    <script src="../asset/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../asset/fonts/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_drop_down" />
+    <script src="../asset/JQuery/jquery.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        
+    </style>
 </head>
+
 <body>
-    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-light p-0">
+        <div class="container" style="height: 60px;">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img class="logo" src="../img/logo1-removebg-preview.png" alt="Logo">
+            </a>
+            <!-- Responsive -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarID"
+                aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar-items -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarID">
+                <ul class="navbar-nav gap-3">
+                    <li class="nav-item"><a class="nav-link text-light" href="home.html">TRANG CHỦ</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="phimmoi.html">PHIM MỚI</a></li>
+                    <li class="nav-item"><a class="nav-link text-light" href="thinhhanh.html">THỊNH HÀNH</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" data-bs-toggle="dropdown">THỂ LOẠI</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="theloai-hanhdong.html">Hành Động</a></li>
+                            <li><a class="dropdown-item" href="#">Hành Động</a></li>
+                            <li><a class="dropdown-item" href="#">Hành Động</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" data-bs-toggle="dropdown">QUỐC GIA</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Hàn Quốc</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- Form search -->
+            <form class="d-flex align-items-center ms-3 ">
+                <div style="width: 173px;height: 35px;" class="input-group rounded-pill bg-light px-2">
+                    <input type="text" class="form-control border-0 bg-transparent" placeholder="Tìm kiếm" />
+                    <button class="btn border-0 bg-transparent" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <a href="#" class="ms-3 text-light" id="languageToggle">
+                    <i class="fa-solid fa-globe" style="font-size: 23px;"></i>
+                </a>
+                <ul class="dropdown-menu" id="languageDropdown" style="display: none;">
+                    <li><a class="dropdown-item" href="#">Tiếng Việt</a></li>
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                </ul>
+                <a href="#" class="ms-3 text-light" data-bs-toggle="modal" data-bs-target="#authModal">
+                    <i class="fa-solid fa-user large-icon" style="font-size: 23px;"></i>
+                </a>
+            </form>
+        </div>
+    </nav>
+    <!-- Banner -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <ol style="list-style: none;" class="carousel-indicators">
+            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" style="height: 1000px;">
+            <div class="carousel-item active">
+                <div class="gradient-overlay"></div>
+
+                <img src="img/Tet-O-Lang-Dia-Nguc-.jpg" alt="Banner 1" />
+                <div class="container">
+                    <div class="carousel-caption text-left">
+                        <h1 class="slider-text big-title title text-uppercase" data-animation-in="fadeInLeft"
+                            data-delay-in="0.6">Phim Nổi Bật</h1>
+                        <p>Phim hành động hot nhất hiện nay.</p>
+                        <div class="d-flex justify-content-center">
+                            <p><a class="btn btn-primary btn-lg" href="#">Xem ngay</a></p>
+                            <p><a class="btn btn-secondary btn-lg ms-2" href="#">Tìm hiểu thêm</a></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="gradient-overlay"></div>
+
+                <img src="img/Tet-O-Lang-Dia-Nguc-.jpg" alt="Banner 2" />
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Phim Hài</h1>
+                        <p>Thư giãn cuối tuần cùng gia đình.</p>
+                        <p><a class="btn btn-primary btn-lg" href="#">Xem thêm</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="gradient-overlay"></div>
+
+                <img src="../img/ke-an-hon-16993269405511730972586.png" alt="Banner 3" />
+                <div class="container">
+                    <div class="carousel-caption text-right">
+                        <h1>Phim Tình Cảm</h1>
+                        <p>Những câu chuyện lãng mạn đong đầy cảm xúc.</p>
+                        <p><a class="btn btn-primary btn-lg" href="#">Khám phá</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="authModalLabel">Chào mừng bạn!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form Đăng nhập -->
+                    <form id="loginForm" class="auth-form">
+                        <h2 class="text-center mb-4">Đăng nhập</h2>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput"><i class="fa-solid fa-user large-icon"></i> Tài khoản</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <input type="checkbox" id="rememberMe">
+                                <label for="rememberMe">Ghi nhớ</label>
+                            </div>
+                            <a href="#">Quên mật khẩu?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Đăng nhập</button>
+                        <p class="text-center mt-3">Hoặc đăng nhập bằng</p>
+                        <div class="d-flex justify-content-center gap-2">
+                            <button type="button" class="btn btn-outline-primary"><i class="fa-brands fa-facebook"></i>
+                                Facebook</button>
+                            <button type="button" class="btn btn-outline-danger"><i class="fa-brands fa-google"></i>
+                                Google</button>
+                        </div>
+                        <p class="text-center mt-3">
+                            Chưa có tài khoản? <a href="#" id="showRegisterForm">Đăng ký</a>
+                        </p>
+                    </form>
+
+                    <!-- Form Đăng ký -->
+                    <form id="registerForm" class="auth-form d-none">
+                        <h2 class="text-center mb-4">Đăng ký</h2>
+                        <div class="form-group">
+                            <input type="text" id="username" name="username" required placeholder=" " />
+                            <label for="username"><i class="fa-solid fa-user large-icon"></i> Tài khoản</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="password" name="password" required placeholder=" " />
+                            <label for="password"><i class="fa-solid fa-lock"></i> Mật khẩu</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="password" name="password" required placeholder=" " />
+                            <label for="password"><i class="fa-solid fa-lock"></i> Xác nhận Mật khẩu</label>
+                        </div>
+                        <button type="submit" class="btn btn-secondary w-100">Đăng ký</button>
+                        <p class="text-center mt-3">Hoặc đăng ký bằng</p>
+                        <div class="d-flex justify-content-center gap-2">
+                            <button type="button" class="btn btn-outline-primary"><i class="fa-brands fa-facebook"></i>
+                                Facebook</button>
+                            <button type="button" class="btn btn-outline-danger"><i class="fa-brands fa-google"></i>
+                                Google</button>
+                        </div>
+                        <p class="text-center mt-3">
+                            Đã có tài khoản? <a href="#" id="showLoginForm">Đăng nhập</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
+
 </html>
+</main>

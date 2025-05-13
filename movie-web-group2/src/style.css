@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+}
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    border-bottom: none;
+    backdrop-filter: blur(3px);
+
+}
+
+.logo {
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+    width: 60px;
+}
+
+nav {
+    justify-content: space-around;
+}
+
+.carousel-item {
+    height: 100vh;
+    position: relative;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+.carousel-control-prev {
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-next {
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+ol {
+    position: absolute;
+    top: 700px;
+}
+
+.drop-item {
+    font-size: 16px;
+}
+
+.gradient-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    z-index: 1;
+    pointer-events: none;
+}
